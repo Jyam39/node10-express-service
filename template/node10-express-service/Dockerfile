@@ -1,5 +1,4 @@
-FROM openfaas/of-watchdog:0.5.3 as watchdog
-
+FROM ghcr.io/openfaas/of-watchdog:0.5.4 as watchdog
 FROM node:10.12.0-alpine as ship
 
 COPY --from=watchdog /fwatchdog /usr/bin/fwatchdog
